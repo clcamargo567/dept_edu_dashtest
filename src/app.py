@@ -15,7 +15,24 @@
 import dash
 import dash_bootstrap_components as dbc
 from dash import Input, Output, dcc, html
+import pandas as pd
+import gspread
+from google.oauth2.service_account import Credentials
 
+def main():
+    print("test")
+    
+    scopes = ["https://www.googleapis.com/auth/spreadsheets"]
+    creds = Credentials.from_service_account_file(f"credentials.json", scopes=scopes)
+    client = gspread.authorize(creds)
+
+    sheet_id = "1rZofgxUScsVhSCpyLEYPtl7pXjbGezqu"
+    sheet = client.open_by_key(sheet_id)
+    
+    values_list = sheet.dataset_1.row_values(1)
+    print(1)
+    
+'''
 app = dash.Dash(
     title="dept_edu_dashtest",
     external_stylesheets=[dbc.themes.BOOTSTRAP],
@@ -84,7 +101,8 @@ def render_page_content(pathname):
             html.P(f"The pathname {pathname} was not recognised..."),
         ]
     )
-
+'''
 
 if __name__ == "__main__":
-    app.run_server(debug=True, port=8050)
+    main()
+    #app.run_server(debug=True, port=8050)
