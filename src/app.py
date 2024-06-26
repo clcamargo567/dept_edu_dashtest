@@ -21,7 +21,7 @@ from google.oauth2.service_account import Credentials
 
 def main():
     #print("test")
-    
+'''
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
     creds = Credentials.from_service_account_file(r"C:\Users\clcam\OneDrive\Desktop\cred\credentials.json", scopes=scopes)
     client = gspread.authorize(creds)
@@ -103,8 +103,8 @@ def render_page_content(pathname):
             html.P(f"The pathname {pathname} was not recognised..."),
         ]
     )
-'''
+
 
 if __name__ == "__main__":
-    main()
-    #app.run_server(debug=True, port=8050)
+    #main()
+    app.run_server(debug=True, port=8050)
