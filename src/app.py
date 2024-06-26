@@ -19,22 +19,22 @@ import pandas as pd
 import gspread
 from google.oauth2.service_account import Credentials
 
-def main():
+#def main():
     #print("test")
-    '''
-        scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-        creds = Credentials.from_service_account_file(r"C:\Users\clcam\OneDrive\Desktop\cred\credentials.json", scopes=scopes)
-        client = gspread.authorize(creds)
+'''
+    scopes = ["https://www.googleapis.com/auth/spreadsheets"]
+    creds = Credentials.from_service_account_file(r"C:\Users\clcam\OneDrive\Desktop\cred\credentials.json", scopes=scopes)
+    client = gspread.authorize(creds)
 
-        sheet_id = "1AmRx6wfdEeYBsYwgsMu7XyffpxwkyzRBkiUzSON1gTY"
-        sheet = client.open_by_key(sheet_id)
-        
-        values_list = sheet.sheet1.get_all_values()
-        
-        df =  pd.DataFrame(values_list, columns=["SCHOOL_ID", "SCHOOL_NAME", "REGION", "CITY", "ADDRESS", "RESP_AGENCY", "MAINTENANCE", "PROG", "INITIATIVE", "SCOPES", "PROJ_STATUS", "PROGRESS", "START_DATE", "END_DATE", "OBLIGATED"]).iloc[1:]
-        print(df)
-        
-    '''
+    sheet_id = "1AmRx6wfdEeYBsYwgsMu7XyffpxwkyzRBkiUzSON1gTY"
+    sheet = client.open_by_key(sheet_id)
+    
+    values_list = sheet.sheet1.get_all_values()
+    
+    df =  pd.DataFrame(values_list, columns=["SCHOOL_ID", "SCHOOL_NAME", "REGION", "CITY", "ADDRESS", "RESP_AGENCY", "MAINTENANCE", "PROG", "INITIATIVE", "SCOPES", "PROJ_STATUS", "PROGRESS", "START_DATE", "END_DATE", "OBLIGATED"]).iloc[1:]
+    print(df)
+    
+'''
 app = dash.Dash(
     title="dept_edu_dashtest",
     external_stylesheets=[dbc.themes.BOOTSTRAP],
