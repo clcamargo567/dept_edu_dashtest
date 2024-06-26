@@ -37,7 +37,7 @@ SIDEBAR_STYLE = {
     "bottom": 0,
     "width": "16rem",
     "padding": "2rem 1rem",
-    "background-color": "#f8f9fa",
+    "background-color": "#21c7ef",
 }
 
 # the styles for the main content position it to the right of the sidebar and
