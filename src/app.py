@@ -15,7 +15,7 @@
 import dash
 import dash_bootstrap_components as dbc
 from dash import Input, Output, dcc, html
-#import datetime
+
 #import plotly
 #import pandas as pd
 #import gspread
@@ -53,7 +53,7 @@ sidebar = html.Div(
         html.H2("Sidebar", className="display-4"),
         html.Hr(),
         html.P(
-            "Testing speed again wiht new render setting", className="lead"
+            "Testing speed again render fix", className="lead"
         ),
         dbc.Nav(
             [
@@ -63,11 +63,6 @@ sidebar = html.Div(
             ],
             vertical=True,
             pills=True,
-        ),
-         dcc.Interval(
-            id='interval-component',
-            interval=1*1000, # in milliseconds
-            n_intervals=0
         )
     ],
     style=SIDEBAR_STYLE,
@@ -78,7 +73,7 @@ content = html.Div(id="page-content", style=CONTENT_STYLE)
 app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
 
 
-@app.callback(Output("page-content", "children"), [Input("url", "pathname", 'interval-component', 'n_intervals')])
+@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 
 def render_page_content(pathname):
     if pathname == "/":
