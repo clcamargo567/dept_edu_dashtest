@@ -51,7 +51,7 @@ sidebar = html.Div(
         html.H2("Sidebar", className="display-4"),
         html.Hr(),
         html.P(
-            "Testing speed of changes after commit", className="lead"
+            "Testing speed again without manual deploy", className="lead"
         ),
         dbc.Nav(
             [
