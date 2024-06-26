@@ -53,7 +53,7 @@ sidebar = html.Div(
         html.H2("Sidebar", className="display-4"),
         html.Hr(),
         html.P(
-            "Testing speed again render fix", className="lead"
+            "Testing speed", className="lead"
         ),
         dbc.Nav(
             [
