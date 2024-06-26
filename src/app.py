@@ -51,7 +51,7 @@ sidebar = html.Div(
         html.H2("Sidebar", className="display-4"),
         html.Hr(),
         html.P(
-            "A simple sidebar layout with navigation links", className="lead"
+            "Testing speed of changes after commit", className="lead"
         ),
         dbc.Nav(
             [
