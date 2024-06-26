@@ -15,9 +15,9 @@
 import dash
 import dash_bootstrap_components as dbc
 from dash import Input, Output, dcc, html
-import pandas as pd
-import gspread
-from google.oauth2.service_account import Credentials
+#import pandas as pd
+#import gspread
+#from google.oauth2.service_account import Credentials
 
 app = dash.Dash(
     title="dept_edu_dashtest",
@@ -72,6 +72,7 @@ app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
 
 
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
+
 def render_page_content(pathname):
     if pathname == "/":
         return html.P("This is the content of the home page!")
