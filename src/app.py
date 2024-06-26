@@ -15,6 +15,7 @@
 import dash
 import dash_bootstrap_components as dbc
 from dash import Input, Output, dcc, html
+#import datetime
 #import plotly
 #import pandas as pd
 #import gspread
@@ -77,7 +78,7 @@ content = html.Div(id="page-content", style=CONTENT_STYLE)
 app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
 
 
-@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
+@app.callback(Output("page-content", "children"), [Input("url", "pathname", 'interval-component', 'n_intervals')])
 
 def render_page_content(pathname):
     if pathname == "/":
