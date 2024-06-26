@@ -15,6 +15,7 @@
 import dash
 import dash_bootstrap_components as dbc
 from dash import Input, Output, dcc, html
+#import plotly
 #import pandas as pd
 #import gspread
 #from google.oauth2.service_account import Credentials
@@ -62,6 +63,11 @@ sidebar = html.Div(
             vertical=True,
             pills=True,
         ),
+         dcc.Interval(
+            id='interval-component',
+            interval=1*1000, # in milliseconds
+            n_intervals=0
+        )
     ],
     style=SIDEBAR_STYLE,
 )
